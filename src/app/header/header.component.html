@@ -1,0 +1,11 @@
+<nav class="teal">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">ToDo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a routerLink='login' *ngIf="!this.isLoggedIn">Login</a></li>
+      <li><a routerLink='signup' *ngIf="!this.isLoggedIn">Signup</a></li>
+      <li><a class="waves-effect waves-light white teal-text btn" *ngIf="this.isLoggedIn" (click)="logout()">Logout</a></li>
+
+    </ul>
+  </div>
+</nav>

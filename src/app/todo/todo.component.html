@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col s12" >
+    <form id="todo-form" (ngSubmit)='add()'>
+      <input type="text" name="title" [(ngModel)]="title">
+      <p>
+        <label>
+          <input type="checkbox" name="status" [(ngModel)]="status" [disabled]="disabled"/>
+          <span>Completed</span>
+        </label>
+      </p>
+      <button class="waves-effect waves-light btn" *ngIf="!isEdit">Add</button>
+      <button class="waves-effect waves-light btn" *ngIf="isEdit" (click)="add()">Update</button>
+    </form>
+
+    <div class="section"></div>
+    <ul class="collection" >
+      <li @items class="collection-item" *ngFor="let t of todos">
+        <div>
+        <span>{{t.todo.title}}</span>
+        <i class="material-icons secondary-content" (click)="removeTodo(t.id)">delete</i>
+        <i class="material-icons secondary-content" (click)="edit(t.todo.title,t.todo.status,t.id)">edit</i>
+        <p>
+            <span>{{t.todo.status==true?"completed":"Pending"}}</span>
+        </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>

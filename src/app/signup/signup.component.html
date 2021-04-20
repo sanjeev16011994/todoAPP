@@ -1,0 +1,27 @@
+<div class="row">
+  <h5 class="center-align">SignUp</h5>
+  <form class="col s12" [formGroup]="signupForm" (ngSubmit)="signup()">
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">email</i>
+        <input id="icon_prefix" type="email" formControlName='email'>
+        <label for="icon_prefix">Email</label>
+        <div *ngIf="signupForm.controls.email.invalid && signupForm.controls.email.touched">
+          <small class="red-text" *ngIf="signupForm.controls.email.errors.required">Email is required</small>
+          <small class="red-text" *ngIf="signupForm.controls.email.errors.email">Email is invalid</small>
+        </div>
+      </div>
+      <div class="input-field col s12">
+        <i class="material-icons prefix">password</i>
+        <input id="icon_telephone" type="password" name="password" formControlName="password">
+        <label for="icon_telephone">Password</label>
+        <div *ngIf="signupForm.controls.password.invalid && signupForm.controls.password.touched">
+          <small class="red-text" *ngIf="signupForm.controls.password.errors.required">Password is required</small>
+          <small class="red-text" *ngIf="signupForm.controls.password.errors.minlength">Minimum 8 characters</small>
+        </div>
+      </div>
+      <button class="right waves-effect waves-light btn">SignUp</button>
+    </div>
+
+  </form>
+</div>
