@@ -9,6 +9,7 @@ authstate=this.auth;
 
   signin(email,password)
   {
+	  console.log(email)
      return this.auth.signInWithEmailAndPassword(email,password)
   }
 
