@@ -34,7 +34,7 @@ constructor(private fb:FormBuilder,private todoService:TodoService,private route
       else{
         this.todoService.signup(email,password)
     .then(user=>{
-          this.route.navigate(['/todo'])
+          this.route.navigate(['/login'])
       })
       .catch(error=>{
         this.error=error.message
