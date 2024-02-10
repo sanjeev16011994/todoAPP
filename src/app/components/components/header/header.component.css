@@ -1,0 +1,27 @@
+.navbar-brand{
+  color: #FFFFFF;
+}
+
+.navbar-nav .nav-item{
+  width: 100px;
+  text-align: center;
+  margin-left: 10px;
+
+}
+
+.nav-link{
+  color: #FFFFFF;
+}
+
+.navbar-nav .nav-item.active a {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Optional: Add some additional styles for hover and focus */
+.navbar-nav .nav-item a:hover,
+.navbar-nav .nav-item a:focus {
+  border-bottom: 2px solid #FFFFFF;
+  color: lime;
+}
+

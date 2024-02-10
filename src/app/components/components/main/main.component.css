@@ -1,0 +1,39 @@
+/* styles.css */
+
+
+.wrapper {
+  display: flex;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  height: 100%;
+  background-color: #f8f9fa;
+}
+
+#content {
+  width: 70%;
+  padding: 10px;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+#sidebarCollapse {
+  background-color: #343a40;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#content.active {
+  width: calc(100% - 250px);
+}
+
+.navbar {
+  background-color: #f8f9fa !important;
+}

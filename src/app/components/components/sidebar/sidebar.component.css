@@ -1,0 +1,40 @@
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  height: 100vh;
+  background: transparent;
+  padding-top: 20px;
+  color: rgb(13, 6, 6);
+  border-right: 1px solid #eee;
+}
+
+#sidebar ul.components {
+  padding: 5px;
+}
+
+#sidebar ul li {
+  font-size: 16px;
+  padding: 10px;
+  border-bottom: 1px solid #e7dede;
+  text-align: justify;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+#sidebar ul li a {
+  color: rgb(23, 12, 12);
+  text-decoration: none;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+#sidebar ul li:hover {
+  background-color: rgba(195, 186, 195, 0.1);
+  color: #fff;
+}
+
+#sidebar ul li img{
+  width: 25px;
+  height: 25px;
+}
+
